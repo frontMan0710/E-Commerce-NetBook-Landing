@@ -1,0 +1,138 @@
+@mixin headerAnc {
+  color: var(--black-color);
+  font-weight: 400;
+  &:hover {
+    color: var(--purple-color);
+  }
+}
+.profileOpt {
+  a {
+    &:first-child {
+      @include headerAnc;
+    }
+    &:last-child {
+      color: var(--purple-color);
+      font-weight: 500;
+      &:hover {
+        color: var(--black-color);
+      }
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  header {
+    height: 144px;
+    .headerContent {
+      width: 1109px;
+      .logoWrapper {
+        width: 325px;
+      }
+      #menuContent {
+        width: 764px;
+        .burgerWrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          ul.userNav, ul.profileOpt {
+            display: flex;
+            justify-content: space-between;
+            height: 16px;
+            font-size: 16px;
+            &:first-of-type {
+              width: 459px;
+              a {
+                @include headerAnc;
+              }
+            }
+            &:last-of-type {
+              width: 230px;
+              padding-right: 23px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+  header {
+    height: 90px;
+    .headerContent {
+      max-width: 1109px;
+      width: 77.06vw;
+      .logoWrapper {
+        min-width: 25%;
+      }
+      #menuContent {
+        height: 90px;
+        width: 100%;
+        .burgerWrapper {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          max-width: 77.06vw;
+          width: 100%;
+          height: 100%;
+          margin: 0 auto;
+          ul.userNav, ul.profileOpt {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 400;
+            height: 16px;
+            font-size: var(--16px-font);
+            &:first-of-type {
+              width: 60%;
+              a {
+                @include headerAnc;
+              }
+            }
+            &:last-of-type {
+              width: 30%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  header {
+    .headerContent {
+      .logoWrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  header {
+    height: 84px;
+    .headerContent {
+      width: 92.75vw;
+      #menuContent {
+        .burgerWrapper {
+          width: 92.75vw;
+          margin: 0 auto;
+          .userNav {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            height: auto;
+            min-height: auto;
+            order: 2;
+            gap: 16px;
+            a {
+              @include headerAnc;
+            }
+          }
+          .profileOpt {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+  }
+}
