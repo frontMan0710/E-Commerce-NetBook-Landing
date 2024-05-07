@@ -48,7 +48,12 @@ ul li { list-style: none;}
 main {
     flex: 1 1 auto;
     z-index: var(--semantic-layer);
-    overflow-y: hidden;
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+footer {
+    background-color: var(--black-color);
+    z-index: var(--semantic-layer);
 }
 header {
     background-color: var(--white-color);
@@ -153,5 +158,8 @@ header .headerContent {
         position: absolute;
         width: 100%;
         left: 0;
+    }
+    .h3Collapsible.active::after {
+        transform: rotate(180deg);
     }
 }

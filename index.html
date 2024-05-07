@@ -153,7 +153,7 @@
                 <div class="fourthTitle">
                     <h2>Make your work easier</h2>
                 </div>
-                <ul>
+                <ul class="fourthCards">
                     <li>
                         <div>
                             <img src="./images/fourthIcon1.svg" width="64" height="64">
@@ -209,6 +209,9 @@
                         </div>
                     </li>
                 </ul>
+                <div class="viewMore">
+                    <a href="javascript:void(0)" id="loadCards">View more benefits</a>
+                </div>
             </div>
         </section>
         <section class="fifth">
@@ -280,28 +283,34 @@
     <footer>
         <div class="contentBorder footerContent">
             <div class="footerLinks">
-                <div>
-                    <ul>
-                        <li><h3>Company</h3></li>
+                <div class="footerColumn">
+                    <h3 class="h3Collapsible">Company</h3>
+                    <ul class="collapsible">
                         <li><a href="javascript:void(0)">About Us</a></li>
                         <li><a href="javascript:void(0)">Blog</a></li>
                         <li><a href="javascript:void(0)">Careers</a></li>
                         <li><a href="javascript:void(0)">Contact Us</a></li>
                     </ul>
-                    <ul>
-                        <li><h3>Support</h3></li>
+                </div>
+                <div class="footerColumn">
+                    <h3 class="h3Collapsible">Support</h3>
+                    <ul class="collapsible">
                         <li><a href="javascript:void(0)">Help Center</a></li>
                         <li><a href="javascript:void(0)">Safety Center</a></li>
                         <li><a href="javascript:void(0)">Community</a></li>
                     </ul>
-                    <ul>
-                        <li><h3>Legal</h3></li>
+                </div>
+                <div class="footerColumn">
+                    <h3 class="h3Collapsible">Legal</h3>
+                    <ul class="collapsible">
                         <li><a href="javascript:void(0)">Cookies Policy</a></li>
                         <li><a href="javascript:void(0)">Privacy Policy</a></li>
                         <li><a href="javascript:void(0)">Terms of Service</a></li>
                     </ul>
+                </div>
+                <div class="footerColumn">
+                    <h3>Install App</h3>
                     <ul>
-                        <li><h3>Install App</h3></li>
                         <li><a href="javascript:void(0)">
                             <img src="./images/googleplayblack.svg" width="162" height="48"></a>
                         </li>
@@ -333,6 +342,8 @@
 <script src="./libs/jquery/plugin/burger/v1.1.1/js/main.js"></script>
 <script src="./libs/swiper/unpkg.com_swiper@8.4.7_swiper-bundle.min.js"></script>
 <script src="./js/tab.js"></script>
+<script src="./js/main.js"></script>
 <script src="./js/slider.js"></script>
+<script src="./js/collapse.js"></script>
 </body>
 </html>
