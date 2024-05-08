@@ -54,6 +54,7 @@
 @mixin borderImage {
   max-width: 100%;
   max-height: 100%;
+  width: 100%;
 }
 @mixin tab {
   width: 100%;
@@ -152,6 +153,11 @@
       font-weight: 600;
     }
   }
+}
+@mixin flexCol {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 h1, h2, h3 {
   color: var(--black-color);
@@ -297,6 +303,9 @@ h1, h2, h3 {
                 @include fourthCard;
               }
             }
+          }
+          .viewMore {
+            display: none;
           }
         }
       }
@@ -554,6 +563,9 @@ h1, h2, h3 {
               }
             }
           }
+          .viewMore {
+            display: none;
+          }
         }
       }
       .fifth {
@@ -665,7 +677,306 @@ h1, h2, h3 {
   }
 }
 @media screen and (max-width: 767px) and (min-width: 415px) {
-
+  .allWrapper {
+    main {
+      width: clamp(415px, 100vw, 767px);
+      .start {
+        padding-top: 112px;
+        padding-bottom: 28px;
+        .startContent {
+          @include colOrientation;
+          gap: 32px;
+          .startTextBlock {
+            @include colOrientation;
+            gap: 16px;
+            //max-width: 318px;
+            width: 76.99vw;
+            max-height: 389px;
+            .saleOffer {
+              display: flex;
+              align-items: center;
+              height: 53px;
+              span {
+                display: none;
+              }
+              a {
+                @include saleOffer;
+              }
+            }
+            .startTitle {
+              @include colOrientation;
+              @include startTitle;
+              height: 216px;
+            }
+            form {
+              display: flex;
+              flex-direction: column;
+              max-width: 384px;
+              width: 100%;
+              height: 112px;
+              font-size: var(--16px-font);
+              input {
+                @include input;
+              }
+              button {
+                @include buttonActivity;
+                background-color: var(--purple-color);
+                color: var(--white-color);
+                font-weight: 500;
+              }
+              input, button {
+                width: 100%;
+                height: 52px;
+              }
+            }
+          }
+          .startPreview {
+            //max-width: 384px;
+            //max-height: 273px;
+            width: 92.97vw;
+            height: 66.1vw;
+            img {
+              @include borderImage;
+            }
+          }
+        }
+      }
+      .second {
+        padding: 28px 0 28px 0;
+        .secondContent {
+          @include colOrientation;
+          //max-width: 318px;
+          width: 76.99vw;
+          gap: 8px;
+          .secondComm {
+            @include secondText;
+            font-size: var(--16px-font);
+          }
+          .companies {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            li {
+              display: flex;
+              align-items: center;
+              width: 13.49vw;
+              min-width: 56px;
+              height: 100%;
+              &:nth-of-type(5) {
+                display: none;
+              }
+              img {
+                @include borderImage;
+              }
+            }
+          }
+        }
+      }
+      .third {
+        padding: 28px 0 28px 0;
+        .thirdContent {
+          @include flexCol;
+          .tabBody {
+            max-width: 657px;
+            max-height: 518px;
+            width: 100vw;
+            height: 73.18vw;
+            .tabContent {
+              width: 100%;
+              height: 100%;
+              img {
+                @include borderImage;
+              }
+            }
+          }
+          .thirdTabs {
+            display: flex;
+            flex-direction: column;
+            width: 92.75vw;
+            height: 478px;
+            .tab {
+              @include tab;
+              text-align: center;
+            }
+            .tab.active {
+              border-bottom: 8px solid var(--purple-color);
+              transition: 0.3s border-bottom-width;
+              padding-bottom: 19px;
+            }
+          }
+        }
+      }
+      .fourth {
+        height: auto;
+        padding: 28px 0 28px 0;
+        .fourthContent {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: 40px;
+          width: 92.75vw;
+          .fourthTitle {
+            @include fourthTitle;
+            text-align: center;
+            max-height: 152px;
+            height: 10.56vw;
+          }
+          ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 48px;
+            width: 100%;
+            height: auto;
+            li {
+              display: flex;
+              flex-direction: column;
+              width: calc(50% - 24px);
+              min-width: 280px;
+              height: 138px;
+              div {
+                @include fourthCard;
+                h3 {
+                  font-size: var(--18px-font);
+                }
+              }
+              &:nth-child(4),
+              &:nth-child(5),
+              &:nth-child(6) {
+                display: none;
+              }
+            }
+          }
+          .viewMore {
+            background-color: var(--light-grey-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 52px;
+            width: 100%;
+            a {
+              color: var(--purple-color);
+              font-weight: 500;
+            }
+          }
+        }
+      }
+      .fifth {
+        padding: 28px 0 28px 0;
+        .fifthContent {
+          display: flex;
+          align-items: center;
+          flex-direction: column-reverse;
+          gap: 32px;
+          width: 92.75vw;
+          .fifthTextBlock {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            text-align: center;
+            width: 77.77vw;
+            height: 204px;
+            h2 {
+              font-size: var(--40px-font);
+            }
+            p {
+              line-height: 24px;
+            }
+            a {
+              @include buttonActivity;
+              background-color: var(--light-purple-color);
+              color: var(--white-color);
+              font-weight: 500;
+              max-width: 384px;
+              border-radius: 4px;
+              width: 100%;
+            }
+          }
+          .diagramWrapper {
+            width: 77.77vw;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+      .sixth {
+        padding: 28px 0 28px 0;
+        .sixthContent {
+          @include colOrientation;
+          gap: 20px;
+          width: 81.15vw;
+          .sixthTextBlock {
+            @include colOrientation;
+            text-align: center;
+            gap: 20px;
+            width: 100%;
+            height: auto;
+            h2 {
+              font-size: var(--40px-font);
+            }
+            p {
+              line-height: 32px;
+              font-size: var(--18px-font);
+            }
+          }
+          .sixthSlider {
+            width: 100%;
+            height: 91px;
+            .swiper-wrapper {
+              min-width: 0;
+              .swiper-slide {
+                @include flexCol;
+                gap: 9px;
+                width: 105px;
+                height: 100%;
+                div {
+                  &:first-child {
+                    height: 48px;
+                  }
+                  &:last-child {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    text-align: center;
+                    height: 34px;
+                    font-size: 13px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .seventh {
+        height: 347px;
+        padding: 28px 0 28px 0;
+        .seventhContent {
+          width: 100vw;
+          .label {
+            @include seventhWrapper;
+            padding: 28px 0 28px 0;
+            p {
+              font-weight: 600;
+              line-height: 32px;
+              width: 77.77vw;
+              font-size: var(--32px-font);
+            }
+            .links {
+              display: flex;
+              justify-content: space-between;
+              flex-direction: column;
+              width: 180px;
+              height: 131px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media screen and (max-width: 414px) {
   .allWrapper {
@@ -765,9 +1076,7 @@ h1, h2, h3 {
         height: 878px;
         padding: 28px 0 28px 0;
         .thirdContent {
-          display: flex;
-          align-items: center;
-          flex-direction: column;
+          @include flexCol;
           .tabBody {
             max-width: 384px;
             max-height: 303px;
@@ -805,9 +1114,7 @@ h1, h2, h3 {
         height: auto;
         padding: 28px 0 28px 0;
         .fourthContent {
-          display: flex;
-          align-items: center;
-          flex-direction: column;
+          @include flexCol;
           gap: 40px;
           max-width: 322px;
           width: 77.77vw;
@@ -927,9 +1234,7 @@ h1, h2, h3 {
             .swiper-wrapper {
               min-width: 0;
               .swiper-slide {
-                display: flex;
-                align-items: center;
-                flex-direction: column;
+                @include flexCol;
                 gap: 9px;
                 width: 105px;
                 height: 100%;

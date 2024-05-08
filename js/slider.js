@@ -12,4 +12,8 @@ const swiper = new Swiper(".swiper", {
             slidesPerView: 3,
         }
     },
+    lazy: {
+        loadPrevNext: true,
+        loadOnTransitionStart: false,
+    },
 })
